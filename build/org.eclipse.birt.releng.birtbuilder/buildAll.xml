@@ -1272,7 +1272,7 @@
 		<property name="buildOutputDir" value="./eclipse/plugins" />
 		<property name="buildOutputDir.tmp" value="./temp" />
 		<property name="outputDir" value="./eclipse/plugins" />
-		<property name="BranchVersion" value="3.7.0" />
+		<property name="BranchVersion" value="4.4.0" />
 		<property name="buildId" value="v${timestamp.currentTime}" />
 
 		<mkdir dir="${buildOutputDir.tmp}" />
@@ -1379,10 +1379,10 @@
                 <echo message="jarprocessor.exclude.sign=true" file="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}/META-INF/eclipse.inf"/>
 		<delete file="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}.jar" failonerror="false"/>
                 <!-- zip up the new jar --> 
-                <jar destfile="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}.jar"
-  		   basedir="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}"
-                   manifest="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}/META-INF/MANIFEST.MF"
-                /> 
+		<jar destfile="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}.jar"
+			basedir="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}"
+			manifest="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}/META-INF/MANIFEST.MF"
+			excludes="META-INF/*.SF" />
 		<delete dir="${outputDir}/org.eclipse.birt.runtime_${BranchVersion}.${buildId}"/>
 
 		<!-- comment out 3.7.0 release -->
