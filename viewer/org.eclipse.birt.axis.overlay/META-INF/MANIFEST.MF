@@ -6,3 +6,4 @@ Bundle-Version: 4.4.0.qualifier
 Fragment-Host: org.apache.axis;bundle-version="1.4.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Eclipse BIRT Project
+Require-Bundle: org.apache.axis

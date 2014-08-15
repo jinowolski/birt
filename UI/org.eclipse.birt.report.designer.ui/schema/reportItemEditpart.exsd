@@ -48,7 +48,7 @@
       <complexType>
          <sequence minOccurs="0" maxOccurs="1">
             <element ref="paletteEntry"/>
-            <element ref="enablement"/>
+<!--            <element ref="enablement"/>-->
          </sequence>
          <attribute name="type" type="string">
             <annotation>
